@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 @objc public enum PMAlertControllerStyle : Int {
     case alert // The alert will adopt a width of 270 (like UIAlertController).
     case walkthrough //The alert will adopt a width of the screen size minus 18 (from the left and right side). This style is designed to accommodate localization, push notifications and more.
@@ -26,6 +27,10 @@ import UIKit
     @IBOutlet weak open var alertDescription: UILabel!
     @IBOutlet weak open var alertActionStackView: UIStackView!
     @IBOutlet weak open var alertStackViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var descBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var descTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var titleTopConstraint: NSLayoutConstraint!
+    
     open var ALERT_STACK_VIEW_HEIGHT : CGFloat = UIScreen.main.bounds.height < 568.0 ? 40 : 62 //if iphone 4 the stack_view_height is 40, else 62
     var animator : UIDynamicAnimator?
     

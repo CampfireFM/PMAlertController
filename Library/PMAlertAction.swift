@@ -20,7 +20,7 @@ import UIKit
     
     open var actionStyle : PMAlertActionStyle
     
-    open var separator = UIImageView()
+    var separator = UIImageView()
     
     init(){
         self.actionStyle = .cancel
